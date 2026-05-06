@@ -1,21 +1,32 @@
-# StableFlow Multi-Ingredient Feed MVP
+# StableFlow Raceday + Results Build
 
-This updated version supports proper multi-ingredient feeds.
+This version adds:
 
-## New feed structure
+## Raceday Charges
+- Raceday fees
+- Strapper fees
+- Transport
+- Farrier/race plates
+- Gear/admin charges
+- Billable flag
+- Included in invoice generation
 
-- Feed Ingredients
-- Feed Meals
-- Feed Meal Items
-- Feed Logs
-
-This allows:
-- multiple ingredients per meal
-- AM / Midday / PM / Night meals
-- quantities and units
-- supplement and medication flags
-- prep notes
-- daily feed sheet view
+## Race Results
+- Racecourse
+- Race number/name
+- Distance
+- Barrier
+- Jockey
+- Weight
+- Track condition
+- Result/position
+- Margin
+- Prize money
+- Trainer comments
+- Jockey comments
+- Recovery notes
+- Next plan
+- Owner update summary
 
 Run:
 
