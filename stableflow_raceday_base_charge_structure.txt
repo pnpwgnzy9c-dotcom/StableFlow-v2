@@ -1,0 +1,165 @@
+
+# StableFlow — Raceday Base Charges Structure
+
+## New Feature Added Concept
+
+Raceday charges should support:
+
+- global default charges
+- racecourse-specific default charges
+- automatic pre-fill when a racecourse is selected
+
+---
+
+# Recommended Structure
+
+## New Table:
+`racecourse_base_charges`
+
+Fields:
+
+- ID
+- Racecourse
+- Charge Name
+- Category
+- Default Amount
+- Billable
+- Notes
+- Active
+
+---
+
+# Example Setup
+
+## Belmont
+
+| Charge | Amount |
+|---|---:|
+| Raceday Fee | $150 |
+| Strapper Fee | $80 |
+| Float Transport | $120 |
+| Race Plates | $45 |
+
+---
+
+## Ascot
+
+| Charge | Amount |
+|---|---:|
+| Raceday Fee | $175 |
+| Strapper Fee | $90 |
+| Float Transport | $140 |
+
+---
+
+# App Workflow
+
+## Step 1
+Select racecourse:
+
+Belmont
+
+---
+
+## Step 2
+StableFlow auto-loads:
+
+- raceday fee
+- transport
+- strapper
+- race plates
+
+---
+
+## Step 3
+Staff can:
+- edit amounts
+- remove charges
+- add extras
+
+---
+
+# Best UI Structure
+
+## Raceday Tab
+
+### Section 1
+Racecourse Templates
+
+### Section 2
+Generated Charges
+
+### Section 3
+Manual Additional Charges
+
+---
+
+# Example
+
+Horse:
+Topform Star
+
+Racecourse:
+Belmont
+
+Auto-generated:
+
+- Raceday Fee — $150
+- Strapper Fee — $80
+- Float Transport — $120
+
+Total:
+$350
+
+Then:
++ owner requested ice boots
++ $25
+
+Invoice total:
+$375
+
+---
+
+# Why This Is Important
+
+This prevents:
+- forgotten fees
+- inconsistent charging
+- manual data entry
+
+It also:
+- speeds up invoicing
+- standardises billing
+- improves profitability tracking
+
+---
+
+# Recommended Future Upgrade
+
+## Auto race import
+
+Eventually:
+- select horse
+- select race meeting
+- StableFlow auto-generates:
+  - raceday charges
+  - transport tasks
+  - staff tasks
+  - owner updates
+
+---
+
+# Recommended Database Expansion
+
+Add:
+
+## racecourse_base_charges
+
+## raceday_events
+
+## raceday_event_items
+
+This allows:
+- reusable templates
+- event-based billing
+- cleaner reporting
